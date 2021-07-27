@@ -2,6 +2,7 @@ import axios from "axios";
 
 import { setAlert } from "./alert";
 
+// const URL = "http://localhost:5000";
 const URL = "https://mazz-kitchen.herokuapp.com";
 
 // Change Settings
