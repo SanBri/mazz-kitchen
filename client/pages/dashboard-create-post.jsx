@@ -4,7 +4,7 @@ import PrivatePage from "../component/layout/PrivatePage";
 import Section from "../component/common/section";
 import Card from "../component/common/card";
 import Alert from "../component/layout/Alert.jsx";
-import PostForm from "../component/dashboard/postForm";
+// import PostForm from "../component/dashboard/postForm";
 
 const dashboardCreatePost = () => {
   const router = useRouter();
@@ -26,7 +26,7 @@ const dashboardCreatePost = () => {
           textBack='Gestion des articles'
         >
           <Alert />
-          <PostForm id={id} />
+          {/* <PostForm id={id} /> */}
         </Card>
       </Section>
     </div>
