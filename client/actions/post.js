@@ -10,7 +10,7 @@ import {
   ADD_TAG,
 } from "./types";
 
-const URL = "http://localhost:5000";
+const URL = "https://mazz-kitchen.herokuapp.com";
 
 // Get All Posts
 export const getPosts = () => async (dispatch) => {
