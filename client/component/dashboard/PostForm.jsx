@@ -6,7 +6,7 @@ import { addPost, addTag, getPost } from "../../actions/post";
 import Input from "../common/input";
 import Button from "../common/button";
 
-const PostForm = ({ id }) => {
+const PostForm = ({ id = null }) => {
   const dispatch = useDispatch();
 
   const [formData, setFormData] = useState({
