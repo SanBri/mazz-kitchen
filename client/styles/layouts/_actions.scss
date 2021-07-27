@@ -1,0 +1,12 @@
+.actions-icons {
+  i {
+    padding-left: 0.8rem;
+    opacity: 0.5;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

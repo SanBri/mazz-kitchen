@@ -1,0 +1,61 @@
+.hero {
+  background: url("/images/hero-background.jpg");
+  background-size: cover;
+  background-position-y: 30%;
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  &__parallelogram {
+    position: absolute;
+    top: 0;
+    animation: right-move 0.5s;
+    height: 66vh;
+    width: 22rem;
+    background-color: $color-secondary;
+    border-bottom-right-radius: 30%;
+    -webkit-transform: perspective(300px) rotateX(-10deg);
+    -o-transform: perspective(300px) rotateX(-30deg);
+    -moz-transform: perspective(300px) rotateX(-30deg);
+    transform-origin: 0% 50%;
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    &-content {
+      width: 16rem;
+      padding: 5rem 2rem;
+      animation: opacity 2s;
+
+      & p {
+        font-family: "Bree-Light";
+        font-size: 1.3rem;
+        margin-top: 0.5rem;
+        padding-left: 0.5rem;
+        color: $color-primary-black;
+      }
+    }
+    &-social-networks {
+      padding: $padding-bottom-paragraph 1rem;
+    }
+    &-information p {
+      font-family: "Nimbus-Medium";
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+  }
+  &__title {
+    width: 60rem;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    & p {
+      cursor: default;
+      animation: yellow-to-white 1s, opacity 0.6s;
+      color: $color-primary-white;
+      font-size: 12rem;
+      font-family: "Fake-Serif";
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}

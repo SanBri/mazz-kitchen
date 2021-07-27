@@ -1,0 +1,28 @@
+.introduction {
+  text-align: justify;
+  &__text {
+    font-family: "Nimbus-Light";
+    padding: 1rem 0 2rem 0;
+    line-height: $regular-space;
+  }
+  &__buttons {
+    max-width: 40rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    & .btn {
+      margin: auto;
+    }
+  }
+}
+
+/* PETIT ECRAN */
+@media all and (max-width: 1400px) {
+  .introduction {
+    &__text {
+      padding: 1rem 0 0.5rem 0;
+    }
+  }
+}

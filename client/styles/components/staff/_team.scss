@@ -1,0 +1,22 @@
+.team {
+  background-color: $color-primary-white;
+  position: relative;
+  z-index: 13;
+  height: 85vh;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  &__title {
+    line-height: 5rem;
+    text-shadow: $regular-shadow;
+    width: 50rem;
+    position: absolute;
+    right: 3rem;
+    top: -10rem;
+  }
+
+  &__content {
+    margin-top: -0.04rem;
+    display: flex;
+    flex-direction: row;
+  }
+}

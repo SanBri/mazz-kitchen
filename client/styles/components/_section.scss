@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+}
+
+.section {
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box;
+  &__solid--background-prim {
+    background-color: $background-prim;
+  }
+  &__solid--color-primary-black {
+    background-color: $color-primary-black;
+  }
+  &__solid--color-primary-white {
+    background-color: $color-primary-white;
+  }
+  &__img {
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+  }
+}
+#fixedHeaderSection {
+  z-index: 90;
+  color: white;
+}
+#headerSection {
+  z-index: 91;
+  position: absolute;
+  color: black;
+}
+
+.section {
+  &__title {
+    text-shadow: $regular-shadow;
+    max-width: 100vw;
+    padding: 0.5rem 5rem;
+    transition-property: background-color;
+    transition-duration: 1s;
+    &:hover {
+      background-color: $color-secondary;
+      transition-property: background-color;
+      transition-duration: 0.4s;
+    }
+  }
+  &__content {
+    padding: 1rem 5rem 3rem 5rem;
+  }
+}

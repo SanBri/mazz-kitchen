@@ -1,0 +1,42 @@
+.single-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__administration {
+    align-self: flex-end;
+  }
+  &__line {
+    height: 2px;
+    width: 75rem;
+    background-color: $color-secondary;
+    margin: 1rem auto 0.5rem auto;
+  }
+  &__image {
+    // margin: 1rem;
+    width: 80rem;
+    height: 30rem;
+    background-color: green;
+    border-radius: 2rem;
+  }
+  &__text {
+    width: 90rem;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: justify;
+    & p {
+      line-height: 1.8rem;
+    }
+  }
+  &__date {
+    margin-bottom: 0.5rem;
+  }
+  &__edit-history {
+    i {
+      color: $color-primary-black;
+    }
+    &--active {
+      margin-top: 1rem;
+    }
+  }
+}

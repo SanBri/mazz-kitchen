@@ -1,0 +1,19 @@
+.post-form__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  & .add-post,
+  .save-post {
+    width: 15rem;
+    margin: 1rem 0.5rem;
+    text-align: center;
+    padding: 1rem 0.4rem;
+  }
+  & .add-post {
+    background-color: $color-secondary;
+  }
+  & .save-post {
+    text-align: center;
+    background-color: $color-edit;
+  }
+}

@@ -1,0 +1,27 @@
+.btn {
+  height: 1rem;
+  text-align: center;
+  padding: 1rem 3rem;
+  background-color: $color-primary-white;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-family: "Futura-Bold";
+  color: black;
+  border-radius: 13px;
+  cursor: pointer;
+  box-shadow: $regular-shadow;
+  &__nav {
+    padding: 0.5rem 1rem;
+    background-color: $color-secondary;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &:hover {
+    box-shadow: none;
+  }
+}

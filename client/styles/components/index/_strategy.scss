@@ -1,0 +1,14 @@
+.strategy {
+  width: 100%;
+  height: 45rem;
+  &__content {
+    padding-top: 5rem;
+    width: 100%;
+    &-yellow-form {
+      clip-path: polygon(0 51%, 100% 14%, 100% 100%, 0% 100%);
+      background-color: $color-secondary;
+      width: 100%;
+      height: 40rem;
+    }
+  }
+}

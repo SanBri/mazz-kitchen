@@ -1,0 +1,36 @@
+.quote-introduction {
+  padding: 3rem 0;
+  &__title {
+    width: 70rem;
+    padding-bottom: $padding-bottom-title;
+  }
+  &__text p {
+    color: $color-primary-black;
+    font-weight: bold;
+    padding-bottom: $padding-bottom-paragraph;
+  }
+  &__form {
+    width: 60rem;
+    margin: auto;
+    padding: 3rem;
+    background-color: $color-primary-white;
+    border-radius: 1rem;
+    box-shadow: $all-shadow;
+    & .input {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__button {
+    padding-top: 1rem;
+    width: 50rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  input[type="submit"] {
+    width: 10rem;
+    margin: auto;
+    padding: 1.5rem 2rem;
+  }
+}

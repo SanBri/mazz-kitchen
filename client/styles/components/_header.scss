@@ -1,0 +1,22 @@
+.fixed-header {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+  &__social-networks {
+    & img {
+      margin-right: 2rem;
+    }
+  }
+}

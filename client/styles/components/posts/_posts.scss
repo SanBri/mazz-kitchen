@@ -1,0 +1,11 @@
+.posts {
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    width: 45rem;
+    margin-left: 15rem;
+    margin-bottom: 1.5rem;
+  }
+}

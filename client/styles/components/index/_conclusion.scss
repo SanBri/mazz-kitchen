@@ -1,0 +1,25 @@
+.conclusion {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  &-card {
+    text-align: center;
+    margin: auto;
+    width: 40rem;
+    &__title {
+      width: 25rem;
+      margin: auto;
+      padding-bottom: $padding-bottom-title;
+    }
+    &__text {
+      padding-bottom: 3rem;
+      & p {
+        font-weight: bold;
+      }
+    }
+    &__button {
+      width: fit-content;
+      margin: auto;
+    }
+  }
+}

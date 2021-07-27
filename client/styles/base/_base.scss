@@ -1,0 +1,10 @@
+html {
+  font-size: 90%;
+}
+
+/* PETIT ECRAN */
+@media all and (max-width: 1400px) {
+  html {
+    font-size: 65.5%; // 1 rem => 10 px
+  }
+}

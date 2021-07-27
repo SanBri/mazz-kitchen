@@ -1,0 +1,42 @@
+// SASS specific construcs  (variables, mixins...)
+@import "styles/utils/variables";
+
+// Base information
+@import "styles/base/base";
+@import "styles/base/reset";
+@import "styles/base/typography";
+@import "styles/base/animation";
+
+// Base components (buttons...)
+@import "styles/components/section";
+@import "styles/components/header";
+@import "styles/components/navigation-bar";
+@import "styles/components/button";
+@import "styles/components/input";
+@import "styles/components/social-network";
+@import "styles/components/footer";
+@import "styles/components/card";
+@import "styles/components/index/hero";
+@import "styles/components/index/introduction";
+@import "styles/components/index/mission";
+@import "styles/components/index/services";
+@import "styles/components/index/strategy";
+@import "styles/components/index/conclusion";
+@import "styles/components/tarifs/offers";
+@import "styles/components/tarifs/contact";
+@import "styles/components/staff/why";
+@import "styles/components/staff/team";
+@import "styles/components/staff/team-card";
+@import "styles/components/posts/posts";
+@import "styles/components/posts/post-card";
+@import "styles/components/post/single-post";
+@import "styles/components/quote/quote-introduction";
+@import "styles/components/dashboard/dashboard";
+@import "styles/components/dashboard/post-form";
+@import "styles/components/dashboard/user-settings";
+
+// Layouts
+@import "styles/layouts/alert";
+@import "styles/layouts/spinner";
+@import "styles/layouts/actions";
+@import "styles/layouts/tags";

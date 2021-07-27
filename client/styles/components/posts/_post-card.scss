@@ -1,0 +1,70 @@
+.post-card {
+  position: relative;
+  width: 70rem;
+  margin: 1rem auto;
+  padding: 3rem;
+  background-color: $color-primary-white;
+  border-radius: 4.5rem;
+  box-shadow: $all-shadow;
+  display: flex;
+  flex-direction: row;
+  &__content {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      padding-bottom: 0.5rem;
+      a {
+        color: $color-primary-black;
+        text-decoration: none;
+      }
+    }
+    &__line {
+      height: 2px;
+      width: 30rem;
+      background-color: $color-secondary;
+      margin-bottom: 1rem;
+    }
+    &__text {
+      width: 45rem;
+      height: 4rem;
+      padding-bottom: 2rem;
+    }
+    &__buttons {
+      width: 45rem;
+      padding-top: 4rem;
+      display: flex;
+      align-items: center;
+      &__administration {
+        margin-left: 30rem;
+      }
+    }
+  }
+  &__image {
+    width: 30rem;
+    height: 15rem;
+    border-radius: 1rem;
+    background-color: rgb(33, 107, 33);
+    position: relative;
+  }
+  &__arrow {
+    cursor: pointer;
+    width: 7rem;
+    height: 3.5rem;
+    position: absolute;
+    transform: rotate(90deg) translate(50%, 50%);
+    top: 25%;
+    left: 100%;
+    background-color: $color-primary-black;
+    border-top-left-radius: 10rem;
+    border-top-right-radius: 10rem;
+    & i {
+      color: $color-primary-white;
+      transform: rotate(90deg);
+      font-size: 3rem;
+      position: absolute;
+      top: 10%;
+      right: 38%;
+    }
+  }
+}

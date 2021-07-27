@@ -1,0 +1,42 @@
+.team-card {
+  padding-top: $padding-bottom-title;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  &__photo {
+    margin: auto;
+    padding-bottom: 2rem;
+    & .image {
+      width: 16rem;
+      height: 16rem;
+      border-radius: 50%;
+      background-color: rgba(192, 192, 192, 0.5);
+    }
+  }
+  &__name {
+    padding-bottom: 1rem;
+    color: $color-secondary;
+  }
+  &__job {
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+  &__text {
+    padding-bottom: 1rem;
+  }
+  &__social-networks {
+    margin: auto;
+    width: fit-content;
+    height: 2.5rem;
+    & img:hover {
+      opacity: 0.5;
+    }
+  }
+  &__button {
+    padding-top: 1rem;
+    margin: auto;
+    width: 15rem;
+  }
+}

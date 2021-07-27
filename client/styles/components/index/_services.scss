@@ -1,0 +1,62 @@
+.services {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  &__content {
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: row;
+  }
+  &-card {
+    margin: auto;
+    overflow: hidden;
+    width: 25rem;
+    height: 30rem;
+    position: relative;
+    cursor: pointer;
+    &:hover &__above {
+      left: -100%;
+    }
+    &__above {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: white;
+      left: 0;
+      z-index: 11;
+      transition: left 0.5s;
+    }
+    &__below {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem;
+      font-family: "Futura-Bold";
+      line-height: 2rem;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 10;
+    }
+  }
+}
+
+/* PETIT ECRAN */
+@media all and (max-width: 1400px) {
+  .services {
+    &__content {
+      margin: auto;
+      height: 25rem;
+    }
+    &-card {
+      width: 25rem;
+      height: 25rem;
+      &__below {
+        width: 100%;
+        height: 30rem;
+      }
+    }
+  }
+}

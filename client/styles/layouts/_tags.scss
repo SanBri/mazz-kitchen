@@ -1,0 +1,28 @@
+.tags-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 0.5rem 1rem 0.5rem;
+  margin: -1rem auto auto auto;
+  &__item {
+    margin-left: 0.3rem;
+    padding: 0.2rem 1rem;
+    background-color: $color-secondary;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    display: inline-flex;
+    font-family: "Futura-Bold";
+    color: black;
+    border-radius: 13px;
+    cursor: pointer;
+    box-shadow: $regular-shadow;
+  }
+}
+
+.tags-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

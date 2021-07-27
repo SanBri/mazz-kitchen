@@ -1,0 +1,44 @@
+.card__back {
+  width: 55rem;
+  & .btn {
+    margin: auto;
+    display: inline-block;
+    background-color: $color-secondary;
+    box-shadow: none;
+    opacity: 0.7;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    padding: 1rem 1rem;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  & a {
+    text-decoration: none;
+  }
+}
+
+.card {
+  margin: 1rem auto 0 auto;
+  padding: 3rem;
+  background-color: $color-primary-white;
+  border-radius: 1rem;
+  box-shadow: $all-shadow;
+
+  &__title {
+    width: 70rem;
+    padding-bottom: $padding-bottom-title;
+    text-shadow: $all-shadow;
+  }
+  &__content {
+    text-align: center;
+  }
+  input[type="submit"] {
+    height: 1rem;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  i {
+    color: $color-secondary;
+  }
+}

@@ -1,0 +1,18 @@
+.user-settings {
+  &__form {
+    margin: auto;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & input {
+      letter-spacing: -1px;
+    }
+    input[type="submit"] {
+      width: 10rem;
+      margin: auto;
+      padding: 1.5rem;
+    }
+  }
+}

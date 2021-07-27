@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Futura-Bold";
+  src: url("/fonts/Futura/Futura-Bold.ttf");
+}
+@font-face {
+  font-family: "Futura-PT";
+  src: url("/fonts/Futura/Futura-PT-Demi.otf");
+}
+@font-face {
+  font-family: "Bree-Light";
+  src: url("/fonts/Bree/Bree-Light.otf");
+}
+@font-face {
+  font-family: "Nimbus-Light";
+  src: url("/fonts/Nimbus/Nimbus-Light.ttf");
+}
+@font-face {
+  font-family: "Nimbus-Medium";
+  src: url("/fonts/Nimbus/Nimbus-Medium.ttf");
+}
+@font-face {
+  font-family: "Fake-Serif";
+  src: url("/fonts/Fake-Serif/Fake-Serif.ttf");
+}
+
+p {
+  color: $color-text;
+  line-height: $regular-space;
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+td,
+tr {
+  font-family: "Nimbus-Light";
+}
+
+.discret {
+  font-family: "Bree-Light";
+  font-style: italic;
+  font-size: 1rem;
+  color: $color-text;
+  opacity: 0.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Futura-Bold";
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 2.3rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1.2rem;
+}
+
+label {
+  font-size: $regular-text;
+  font-family: "Futura-PT";
+  color: $color-text;
+  padding-right: 0.5rem;
+}
+
+input,
+select,
+textarea {
+  font-size: $regular-text;
+  font-family: "Futura-PT";
+}
