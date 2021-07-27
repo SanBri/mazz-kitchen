@@ -26,7 +26,7 @@ const dashboardCreatePost = () => {
           textBack='Gestion des articles'
         >
           <Alert />
-          <PostForm id={id} />
+          <PostForm />
         </Card>
       </Section>
     </div>

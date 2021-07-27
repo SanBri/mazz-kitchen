@@ -1,76 +1,77 @@
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
+// import { useState, useEffect } from "react";
+// import { useRouter } from "next/router";
+// import { useDispatch, useSelector } from "react-redux";
 
-import { addPost, addTag, getPost } from "../../actions/post";
-import Input from "../common/input";
-import Button from "../common/button";
+// import { addPost, addTag, getPost } from "../../actions/post";
+// import Input from "../common/input";
+// import Button from "../common/button";
 
-const PostForm = ({ id }) => {
-  const dispatch = useDispatch();
+const PostForm = (/* { id } */) => {
+  // const dispatch = useDispatch();
 
-  const [formData, setFormData] = useState({
-    title: "",
-    text: "",
-    category: "",
-    tags: [],
-  });
+  // const [formData, setFormData] = useState({
+  //   title: "",
+  //   text: "",
+  //   category: "",
+  //   tags: [],
+  // });
 
-  useEffect(() => {
-    if (id) {
-      dispatch(getPost(id));
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (id) {
+  //     dispatch(getPost(id));
+  //   }
+  // }, []);
 
-  const post = useSelector((state) => state.postReducer.post);
+  // const post = useSelector((state) => state.postReducer.post);
 
-  useEffect(() => {
-    if (post) {
-      setFormData((formData) => ({
-        ...formData,
-        title: post.title,
-        text: post.text,
-        category: "",
-        tags: post.tags,
-      }));
-    }
-  }, [post]);
+  // useEffect(() => {
+  //   if (post) {
+  //     setFormData((formData) => ({
+  //       ...formData,
+  //       title: post.title,
+  //       text: post.text,
+  //       category: "",
+  //       tags: post.tags,
+  //     }));
+  //   }
+  // }, [post]);
 
-  const { title, text, category, tags } = formData;
+  // const { title, text, category, tags } = formData;
 
-  const options = ["catégorie A", "catégorie B", "catégorie C"];
+  // const options = ["catégorie A", "catégorie B", "catégorie C"];
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const onChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // const onChange = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
 
-  const addTagClick = (e) => {
-    e.preventDefault();
-    if (document.getElementById("tags").value !== "") {
-      dispatch(addTag(document.getElementById("tags").value));
-      setFormData({ ...formData, tags });
-      document.getElementById("tags").value = "";
-    }
-  };
+  // const addTagClick = (e) => {
+  //   e.preventDefault();
+  //   if (document.getElementById("tags").value !== "") {
+  //     dispatch(addTag(document.getElementById("tags").value));
+  //     setFormData({ ...formData, tags });
+  //     document.getElementById("tags").value = "";
+  //   }
+  // };
 
-  const onSubmit = (e, status) => {
-    e.preventDefault();
-    formData.status = status;
-    if (!id) {
-      dispatch(addPost(formData, status));
-    } else {
-      dispatch(addPost(formData, status, id, true));
-    }
-    formData.title !== "" && formData.text !== ""
-      ? router.push("/dashboard-posts")
-      : "";
-  };
+  // const onSubmit = (e, status) => {
+  //   e.preventDefault();
+  //   formData.status = status;
+  //   if (!id) {
+  //     dispatch(addPost(formData, status));
+  //   } else {
+  //     dispatch(addPost(formData, status, id, true));
+  //   }
+  //   formData.title !== "" && formData.text !== ""
+  //     ? router.push("/dashboard-posts")
+  //     : "";
+  // };
 
   return (
     <div className='post-form'>
-      <form id='postForm'>
+      <p>COUCOU JE SUIS LA</p>
+      {/* <form id='postForm'>
         <Input
           name='title'
           label='Titre'
@@ -87,7 +88,7 @@ const PostForm = ({ id }) => {
           value={text}
           onChange={(e) => onChange(e)}
         />
-        {/* <Input
+        <Input
           name='text'
           label='Catégorie'
           type='select'
@@ -95,7 +96,7 @@ const PostForm = ({ id }) => {
           selected={category}
           onChange={(e) => onChange(e)}
           required={false}
-        /> */}
+        />
         <button onClick={(e) => addTagClick(e)}>Ajouter</button>
 
         <Input
@@ -103,7 +104,6 @@ const PostForm = ({ id }) => {
           label='Tags'
           type='text'
           id='tags'
-          // onChange={(e) => onChange(e)}
           required={false}
         />
         {tags && tags.length > 0 ? (
@@ -135,7 +135,7 @@ const PostForm = ({ id }) => {
             Enregister en brouillon
           </Button>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 };
