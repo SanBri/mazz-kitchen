@@ -1,16 +1,16 @@
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 import PrivatePage from "../component/layout/PrivatePage";
 import Section from "../component/common/section";
 import Card from "../component/common/card";
 import Alert from "../component/layout/Alert.jsx";
-import PostForm from "../component/dashboard/postForm";
+import PostForm from "../component/dashboard/postForm.jsx";
 
 const dashboardCreatePost = () => {
-  const router = useRouter();
-  const {
-    query: { id },
-  } = router;
+  // const router = useRouter();
+  // const {
+  //   query: { id },
+  // } = router;
 
   return (
     <div>
