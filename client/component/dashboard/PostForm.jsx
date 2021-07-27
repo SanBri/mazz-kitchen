@@ -6,7 +6,7 @@ import { addPost, addTag, getPost } from "../../actions/post";
 import Input from "../common/input";
 import Button from "../common/button";
 
-const PostForm = ({ id = null }) => {
+const PostForm = ({ id }) => {
   const dispatch = useDispatch();
 
   const [formData, setFormData] = useState({
@@ -87,7 +87,7 @@ const PostForm = ({ id = null }) => {
           value={text}
           onChange={(e) => onChange(e)}
         />
-        <Input
+        {/* <Input
           name='text'
           label='Catégorie'
           type='select'
@@ -95,7 +95,7 @@ const PostForm = ({ id = null }) => {
           selected={category}
           onChange={(e) => onChange(e)}
           required={false}
-        />
+        /> */}
         <button onClick={(e) => addTagClick(e)}>Ajouter</button>
 
         <Input
