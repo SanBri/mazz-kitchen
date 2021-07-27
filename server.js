@@ -45,10 +45,10 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/posts", postsRoute);
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-app.use(express.static(path.join(__dirname, "./client/public")));
-app.use("/.next", express.static(path.join(__dirname, "./client/.next")));
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
+// app.use(express.static(path.join(__dirname, "./client/public")));
+// app.use("/.next", express.static(path.join(__dirname, "./client/.next")));
 
 // app.use(express.static("./client/.next"));
 // app.get("/*", (_, res) => {
