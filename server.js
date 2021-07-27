@@ -48,6 +48,6 @@ app.use("/api/posts", postsRoute);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use(express.static("client/build"));
-router.get("/*", (_, res) => {
+app.get("/*", (_, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
