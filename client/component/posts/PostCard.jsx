@@ -6,7 +6,7 @@ import SocialNetworks from "../common/socialNetworks";
 import Actions from "../layout/Actions";
 
 const PostCard = ({ post }) => {
-  const { _id, title, text, author, tags, image } = post;
+  const { _id, title, text, image } = post;
   const previewText = text.substr(0, 350) + `...`;
 
   const isAuthenticated = useSelector(
@@ -26,9 +26,10 @@ const PostCard = ({ post }) => {
         <div className='post-card__content__line'></div>
         <Link href={"/" + _id}>
           <a>
-            <div className='post-card__content__text'>
-              <p>{previewText}</p>
-            </div>
+            <div
+              className='post-card__content__text'
+              dangerouslySetInnerHTML={{ __html: previewText }}
+            ></div>
           </a>
         </Link>
         <div className='post-card__content__buttons'>

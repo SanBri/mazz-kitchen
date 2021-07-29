@@ -37,14 +37,15 @@ const SinglePost = ({ post }) => {
         </p>
       </div>
       <div className='single-post__image'></div>
-      <div className='single-post__text'>
-        <p>{text}</p>
-      </div>
+      <div
+        className='single-post__text'
+        dangerouslySetInnerHTML={{ __html: text }}
+      ></div>
 
       {isAuthenticated && edited.length > 0 ? (
         <div className='single-post__edit-history'>
           <Button
-            onClick={(e) => {
+            onClick={() => {
               toggleShowEditHistory(!showEditHistory);
             }}
           >

@@ -1,77 +1,85 @@
-// import { useState, useEffect } from "react";
-// import { useRouter } from "next/router";
-// import { useDispatch, useSelector } from "react-redux";
+import { React, useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { Editor } from "@tinymce/tinymce-react";
 
-// import { addPost, addTag, getPost } from "../../actions/post";
-// import Input from "../common/input";
-// import Button from "../common/button";
+import { addPost, addTag, getPost } from "../../actions/post";
+import Input from "../common/input";
+import Button from "../common/button";
 
-const PostForm = (/* { id } */) => {
-  // const dispatch = useDispatch();
+const PostForm = ({ id }) => {
+  const dispatch = useDispatch();
 
-  // const [formData, setFormData] = useState({
-  //   title: "",
-  //   text: "",
-  //   category: "",
-  //   tags: [],
-  // });
+  const [textContent, setTextContent] = useState("");
+  const [formData, setFormData] = useState({
+    title: "",
+    text: "",
+    category: "",
+    tags: [],
+  });
 
-  // useEffect(() => {
-  //   if (id) {
-  //     dispatch(getPost(id));
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (id) {
+      dispatch(getPost(id));
+    }
+  }, []);
 
-  // const post = useSelector((state) => state.postReducer.post);
+  const post = useSelector((state) => state.postReducer.post);
 
-  // useEffect(() => {
-  //   if (post) {
-  //     setFormData((formData) => ({
-  //       ...formData,
-  //       title: post.title,
-  //       text: post.text,
-  //       category: "",
-  //       tags: post.tags,
-  //     }));
-  //   }
-  // }, [post]);
+  useEffect(() => {
+    if (post) {
+      setFormData((formData) => ({
+        ...formData,
+        title: post.title,
+        text: post.text,
+        category: "",
+        tags: post.tags,
+      }));
+    }
+  }, [post]);
 
-  // const { title, text, category, tags } = formData;
+  const { title, text, category, tags } = formData;
 
-  // const options = ["catégorie A", "catégorie B", "catégorie C"];
+  const options = ["catégorie A", "catégorie B", "catégorie C"];
 
-  // const router = useRouter();
+  const router = useRouter();
 
-  // const onChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
+  const onChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  // const addTagClick = (e) => {
-  //   e.preventDefault();
-  //   if (document.getElementById("tags").value !== "") {
-  //     dispatch(addTag(document.getElementById("tags").value));
-  //     setFormData({ ...formData, tags });
-  //     document.getElementById("tags").value = "";
-  //   }
-  // };
+  const textChange = (e) => {
+    setTextContent(e);
+  };
 
-  // const onSubmit = (e, status) => {
-  //   e.preventDefault();
-  //   formData.status = status;
-  //   if (!id) {
-  //     dispatch(addPost(formData, status));
-  //   } else {
-  //     dispatch(addPost(formData, status, id, true));
-  //   }
-  //   formData.title !== "" && formData.text !== ""
-  //     ? router.push("/dashboard-posts")
-  //     : "";
-  // };
+  const addTagClick = (e) => {
+    e.preventDefault();
+    if (document.getElementById("tags").value !== "") {
+      dispatch(addTag(document.getElementById("tags").value));
+      setFormData({ ...formData, tags });
+      document.getElementById("tags").value = "";
+    }
+  };
+
+  const onSubmit = (e, status) => {
+    e.preventDefault();
+    formData.status = status;
+    if (textContent !== "") {
+      formData.text = textContent;
+    }
+    if (!id) {
+      dispatch(addPost(formData, status));
+    } else {
+      dispatch(addPost(formData, status, id, true));
+    }
+    formData.title !== "" && formData.text !== ""
+      ? router.push("/dashboard-posts")
+      : "";
+  };
 
   return (
     <div className='post-form'>
-      <p>COUCOU JE SUIS LA</p>
-      {/* <form id='postForm'>
+      <form id='postForm'>
         <Input
           name='title'
           label='Titre'
@@ -80,16 +88,28 @@ const PostForm = (/* { id } */) => {
           value={title}
           onChange={(e) => onChange(e)}
         />
-        <Input
+        <Editor
+          apiKey='cjgjybypx0spctvhpkvjg6unu89di4hkke40mpc2xpisiu5g'
+          name='text'
+          label='Contenu'
+          initialValue={text}
+          onEditorChange={(e) => textChange(e)}
+          init={{
+            plugins: "link image code",
+            toolbar:
+              "undo redo | bold italic | alignleft aligncenter alignright | code",
+          }}
+        />
+        {/* <Input
           name='text'
           label='Contenu'
           placeholder='Rédigez un article...'
           type='textarea'
           value={text}
           onChange={(e) => onChange(e)}
-        />
+        /> */}
         <Input
-          name='text'
+          name='category'
           label='Catégorie'
           type='select'
           options={options}
@@ -98,7 +118,6 @@ const PostForm = (/* { id } */) => {
           required={false}
         />
         <button onClick={(e) => addTagClick(e)}>Ajouter</button>
-
         <Input
           name='tags'
           label='Tags'
@@ -135,7 +154,7 @@ const PostForm = (/* { id } */) => {
             Enregister en brouillon
           </Button>
         </div>
-      </form> */}
+      </form>
     </div>
   );
 };
