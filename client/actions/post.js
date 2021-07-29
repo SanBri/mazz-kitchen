@@ -10,8 +10,8 @@ import {
   ADD_TAG,
 } from "./types";
 
-// const URL = "http://localhost:5000";
-const URL = "https://mazz-kitchen.herokuapp.com";
+const URL = "http://localhost:5000";
+// const URL = "https://mazz-kitchen.herokuapp.com";
 
 // Get All Posts
 export const getPosts = () => async (dispatch) => {
@@ -107,7 +107,7 @@ export const addPost =
         }
       }
     } catch (err) {
-      const errors = err.response;
+      const errors = err.response.data.errors;
       if (errors) {
         errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
       }
