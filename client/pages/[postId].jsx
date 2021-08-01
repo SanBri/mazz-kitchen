@@ -19,8 +19,8 @@ const Post = ({ post }) => {
   );
 };
 
-const URL = "http://localhost:5000";
-// const URL = "https://mazz-kitchen.herokuapp.com";
+// const URL = "http://localhost:5000";
+const URL = "https://mazz-kitchen.herokuapp.com";
 
 export async function getStaticPaths() {
   let paths = [];

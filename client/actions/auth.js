@@ -10,8 +10,8 @@ import {
   LOGOUT,
 } from "./types";
 
-// const URL = "http://localhost:5000";
-const URL = "https://mazz-kitchen.herokuapp.com";
+const URL = "http://localhost:5000";
+// const URL = "https://mazz-kitchen.herokuapp.com";
 
 // Load User
 export const loadUser = () => async (dispatch) => {
