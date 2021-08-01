@@ -45,9 +45,17 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/posts", postsRoute);
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-app.use(express.static(path.join(__dirname, "./client/out")));
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
+// app.use(express.static(path.join(__dirname, "./client/out")));
+
+    if (process.env.NODE_ENV === "production"{
+      app.use(express.static("build"));
+      app.get("*", (_, res) => {
+        res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+      });
+    }
+
 
 // app.use(express.static("./client/.next"));
 // app.get("/*", (_, res) => {
