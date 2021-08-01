@@ -50,8 +50,9 @@ const __dirname = dirname(__filename);
 // app.use(express.static(path.join(__dirname, "./client/out")));
 
 app.use(express.static("build"));
-app.get("*", (_, res) => {
-  res.sendFile(path.resolve(__dirname, "build", "index.html"));
+app.get("*", function (req, res) {
+  const index = path.join(__dirname, "build", "index.html");
+  res.sendFile(index);
 });
 
 // app.use(express.static("./client/.next"));
